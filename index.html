@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Lights</title>
+    <style>
+        button{
+            padding: 10px;
+            margin: 20px;
+            background-color: orange;
+        }
+        img{
+            margin-left: 230px;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(138, 138, 138);">
+    <h2>BUTTON DEPENDENT TRAFFIC LIGHTS</h2>
+    <h3>by Salman Abdul Rahim</h3>
+    <script>
+        function lights(value){
+            var pic;
+
+            if(value == 0){
+                pic="all_off.jpg";
+            }
+            else if(value == 1){
+                pic="red.jpg"
+            }
+            else if(value == 2){
+                pic="yellow.jpg"
+            }
+            else if(value == 3){
+                pic="green.jpg"
+            }
+            else if(value == 4){
+                pic="all_on.jpg"
+            }
+            document.getElementById("bulb").src=pic;
+
+        }
+    </script>
+    <br>
+    <img id="bulb" src="all_off.jpg">
+    <br>
+    <button onclick="lights(1)">Red</button>
+    <button onclick="lights(2)">Yellow</button>
+    <button onclick="lights(3)">Green</button>
+    <button onclick="lights(4)">ON All</button>
+    <button onclick="lights(0)">OFF All</button>
+</body>
+</html>
